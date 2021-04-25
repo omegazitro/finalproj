@@ -7,7 +7,7 @@
   </div>
 
   <div class="container mt-8 mx-auto">
-    <div class="card lg:card-side bordered">
+    <div class="card lg:card-side bordered bg-white">
       <figure>
         <img class="mt-3 ml-4" src="https://picsum.photos/id/1005/400/250" />
       </figure>
@@ -21,14 +21,13 @@
         </p>
         <div class="card-actions">
           <button class="btn btn-success hover:bg-warning">Purchase</button>
-          <button class="btn btn-ghost">More info</button>
         </div>
       </div>
     </div>
   </div>
 
   <div class="container mt-8 mx-auto">
-    <div class="card lg:card-side bordered">
+    <div class="card lg:card-side bordered bg-white">
       <figure>
         <img class="mt-3 ml-4" src="https://picsum.photos/id/1005/400/250" />
       </figure>
@@ -42,14 +41,13 @@
         </p>
         <div class="card-actions">
           <button class="btn btn-success hover:bg-warning">Purchase</button>
-          <button class="btn btn-ghost">More info</button>
         </div>
       </div>
     </div>
   </div>
 
   <div class="container mt-8 mx-auto">
-    <div class="card lg:card-side bordered">
+    <div class="card lg:card-side bordered bg-white">
       <figure>
         <img class="mt-3 ml-4" src="https://picsum.photos/id/1005/400/250" />
       </figure>
@@ -67,14 +65,13 @@
         </p>
         <div class="card-actions">
           <button class="btn btn-success hover:bg-warning">Purchase</button>
-          <button class="btn btn-ghost">More info</button>
         </div>
       </div>
     </div>
   </div>
 
   <div class="container mt-8 mx-auto">
-    <div class="card lg:card-side bordered">
+    <div class="card lg:card-side bordered bg-white">
       <figure>
         <img class="mt-3 ml-4" src="https://picsum.photos/id/1005/400/250" />
       </figure>
@@ -87,14 +84,13 @@
         </p>
         <div class="card-actions">
           <button class="btn btn-success hover:bg-warning">Purchase</button>
-          <button class="btn btn-ghost">More info</button>
         </div>
       </div>
     </div>
   </div>
 
   <div class="container mt-8 mx-auto">
-    <div class="card lg:card-side bordered">
+    <div class="card lg:card-side bordered bg-white">
       <figure>
         <img class="mt-3 ml-4" src="https://picsum.photos/id/1005/400/250" />
       </figure>
@@ -106,14 +102,22 @@
           Two (3) invitations to Wednesday Night Fiesta Party.
         </p>
         <div class="card-actions">
-          <button class="btn btn-success hover:bg-warning">Purchase</button>
-          <button class="btn btn-ghost">More info</button>
+          <button class="btn btn-success hover:bg-warning" @click="send">Purchase</button>
         </div>
       </div>
     </div>
   </div>
+
+
+
 </template>
 
 <script setup>
 import { user } from '../helpers/useAuth'
+const send = () => {
+  if (newMessage.value?.length > 0) {
+    sendMessage(newMessage.value)
+    newMessage.value = null
+  }
+}
 </script>

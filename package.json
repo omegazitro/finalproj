@@ -1,6 +1,7 @@
 {
-  "name": "login",
+  "name": "charrodaysapp",
   "version": "0.0.0",
+  "author": "Mario Ortiz <morti137@stu.southtexascollege.edu>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
